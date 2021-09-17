@@ -31,8 +31,6 @@ def bubble_sort(vb):
         #print(vb)
         fim -= 1
 
-
-
 def selection_sort(vs):
     i = 0
     while i < len(vs) - 1:
@@ -50,10 +48,6 @@ def selection_sort(vs):
             vs[menor] = temp
         #print(vs)
         i += 1
-
-
-
-
 
 def insertion_sort(vi):
     i = 1
@@ -88,5 +82,4 @@ bubble_sort(vb)
 depois = time.time()
 total = (depois - antes)
 print("Bubble sort: %10f s" % total)
-
   ~~~
