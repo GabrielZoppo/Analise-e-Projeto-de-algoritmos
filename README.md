@@ -7,7 +7,7 @@ import time
 
 vetor = list(range(0,100)) #gera vetor
 random.shuffle(vetor)
-
+print(vetor)
 ##Cada vX desse corresponde a um algoritmo de ordenação,
 # dessa forma é posssivel testar a performace com o mesmo vetor em todos eles!
 vb = vetor.copy() #Bubble Sort
@@ -28,14 +28,10 @@ def bubble_sort(vb):
                 vb[i] = vb[i+1]
                 vb[i+1] = temp
             i += 1
+        #print(vb)
         fim -= 1
 
-antes = time.time()
-bubble_sort(vb)
-depois = time.time()
 
-total = (depois - antes)
-print("Bubble sort: %10f s" % total)
 
 def selection_sort(vs):
     i = 0
@@ -52,15 +48,12 @@ def selection_sort(vs):
             temp = vs[i]
             vs[i] = vs[menor]
             vs[menor] = temp
+        #print(vs)
         i += 1
 
-antes = time.time()
-selection_sort(vs)
-depois = time.time()
 
-total = (depois - antes)
 
-print("Selection Sort: %10f s" % total)
+
 
 def insertion_sort(vi):
     i = 1
@@ -76,16 +69,24 @@ def insertion_sort(vi):
         if trocou:
             vi[j+1] = temp
         i += 1
+        #print(vi)
 
 antes = time.time()
 selection_sort(vi)
 depois = time.time()
-
 total = (depois - antes)
-
 print("Insertion Sort: %10f s" % total)
 
+antes = time.time()
+selection_sort(vs)
+depois = time.time()
+total = (depois - antes)
+print("Selection Sort: %10f s" % total)
 
+antes = time.time()
+bubble_sort(vb)
+depois = time.time()
+total = (depois - antes)
+print("Bubble sort: %10f s" % total)
 
-  
   ~~~
