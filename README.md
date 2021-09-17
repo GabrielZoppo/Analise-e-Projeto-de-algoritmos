@@ -7,7 +7,7 @@ import time
 
 vetor = list(range(0,100)) #gera vetor
 random.shuffle(vetor)
-print(vetor)
+#print(vetor)
 ##Cada vX desse corresponde a um algoritmo de ordenação,
 # dessa forma é posssivel testar a performace com o mesmo vetor em todos eles!
 vb = vetor.copy() #Bubble Sort
