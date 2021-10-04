@@ -35,7 +35,7 @@ def selection_sort(vs):
 antes = time.time()
 selection_sort(vs)
 depois = time.time()
-total = (depois - antes)*1000
+total = (depois - antes)
 print("Selection Sort: %10f" % total)
 
 def quick_sort(vq, p, r):
@@ -67,7 +67,7 @@ def trocar(v, n, m):
 antes = time.time()
 quick_sort(vq, 0, len(vq)-1)
 depois = time.time()
-total = (depois - antes)*1000
+total = (depois - antes)
 print("Quick Sort %10f" %total)
 
 def countingSort(array):
@@ -100,6 +100,6 @@ def countingSort(array):
 antes = time.time()
 countingSort(vc)
 depois = time.time()
-total = (depois - antes)*1000
+total = (depois - antes)
 print("Counting Sort: %10f" % total)
   ~~~
