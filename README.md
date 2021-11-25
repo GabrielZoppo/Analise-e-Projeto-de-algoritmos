@@ -207,7 +207,8 @@ def bellman_ford(graph, source):
         for node in graph:
             for neighbour in graph[node]:
 
-                # Verifica a distância entre o nodo e todos os nodos visinhos e coloca na variável distancia, juntamente com o nodo que a distância foi calculada
+                # Verifica a distância entre o nodo e todos os nodos visinhos 
+                # e coloca na variável distancia, juntamente com o nodo que a distância foi calculada
                 if distance[neighbour] > distance[node] + graph[node][neighbour]:
                     distance[neighbour], predecessor[neighbour] = distance[node] + \
                         graph[node][neighbour], node
@@ -230,7 +231,8 @@ if __name__ == '__main__':
 # Fazendo a declaração do grafo utilizado, chamar a função e printar sua distância 
     n = 10
     grafo = {
-        'Argentina': {'Chile': random.randrange(0, n), 'Bolivia': random.randrange(0, n), 'Uruguay': random.randrange(0, n), 'Brasil': random.randrange(0, n), 'Paraguay': random.randrange(0, n) },
+        'Argentina': {'Chile': random.randrange(0, n), 'Bolivia': random.randrange(0, n), 
+        'Uruguay': random.randrange(0, n), 'Brasil': random.randrange(0, n), 'Paraguay': random.randrange(0, n) },
         'Brasil': {'Venezuela': random.randrange(0, n), 'Bolivia': random.randrange(0, n)},
         'Uruguay': {'Brasil': random.randrange(0, n)},
         'Bolivia': {'Brasil': random.randrange(0, n), 'Peru': random.randrange(0, n)},
